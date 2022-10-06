@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/styles.css">
+    <style>
+        button {
+            background: #985cff;
+            color: #f2f0fc;
+            padding: 11px 11px;
+            border-radius: 13px;
+            border: none;
+            font-size: 15px;
+        }
+        input {
+            width: 400px;
+            height: calc(2rem + 2px);
+            font-size: 15px;
+            border-radius: 12px;
+        }
+        input:focus{
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem #d5d1f0;
+        }
+
+        .container {
+            margin-top: 200px;
+            display: flex;
+            justify-content: center;
+            column-gap: 15px;
+            raw-gap: 15px;
+        }
+        .ul_cont {
+            display: flex;
+            justify-content: center;
+        }
+        .l{
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    function createline() {
+    let liFirst = document.createElement('li');
+    var val = document.getElementById('text_input').value;
+    liFirst.innerHTML = val;
+    ul.prepend(liFirst);
+    document.getElementById("text_input").value = "";
+    }
+
+
+</script>
+
+<div class="container">
+    <input id="text_input" type="text" placeholder="Начинайте вводить..."/>
+    <button onclick="createline()">Добавить</button>
+</div>
+<div class="ul_cont">
+    <ul id="ul">
+    </ul>
+    <div class="l"></div>
+</div>
+</body>
+</html>
